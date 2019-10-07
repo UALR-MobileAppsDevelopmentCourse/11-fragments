@@ -29,7 +29,7 @@ public class FirstFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        button.findViewById(R.id.button);
+        button = view.findViewById(R.id.button);
         label = view.findViewById(R.id.textLabel);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
