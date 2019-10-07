@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- TODO 03. Add the fragment statically to the activity -->
+    <!-- TODO 03. Add a "placeholder" container (usually a FrameLayout) to the activity, where the fragment it going to be inserted at runtime -->
+    <FrameLayout
+        android:id="@+id/fragment_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
