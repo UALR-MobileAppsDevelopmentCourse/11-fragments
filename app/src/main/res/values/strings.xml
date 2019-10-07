@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Fragments</string>
+    <string name="add_button_label">add new text</string>
+    <string name="field_hint">Your new text here</string>
+    <string name="text_output_placeholder">Your text list here:</string>
+    <string name="clear_button_label">clear all</string>
+    <string name="texts_added_label">texts added: </string>
+    <string name="text_added_value">0</string>
 </resources>
