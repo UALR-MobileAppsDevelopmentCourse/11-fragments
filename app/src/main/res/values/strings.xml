@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Fragments</string>
+    <string name="save_data_button">save changes</string>
+    <string name="first_name_hint">First name</string>
+    <string name="last_name_hint">Last name</string>
+    <string name="age_hint">Age</string>
 </resources>
