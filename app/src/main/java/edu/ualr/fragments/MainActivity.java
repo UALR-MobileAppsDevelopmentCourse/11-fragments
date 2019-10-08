@@ -1,6 +1,7 @@
 package edu.ualr.fragments;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 
@@ -12,5 +13,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // TODO 04. Finding fragment by id
+        Fragment demoFragment = getSupportFragmentManager().findFragmentById(R.id.demoFragment);
+
     }
 }
