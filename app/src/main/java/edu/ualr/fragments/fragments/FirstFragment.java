@@ -58,6 +58,10 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         button = view.findViewById(R.id.button);
         label = view.findViewById(R.id.textLabel);
+        // TODO 06. Access the arguments of the fragment within onViewCreated to populate widgets with the data in
+        // the arguments
+        String title = getArguments().getString(TITLE_VALUE_KEY);
+        label.setText(title);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {}
