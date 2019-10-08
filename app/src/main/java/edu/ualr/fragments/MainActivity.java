@@ -19,19 +19,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // TODO 04. Add dynamically a new fragment to the activity
+        // TODO 06. Load the fragment dynamically
+        FirstFragment fragment = FirstFragment.newIntance(23, "My new fragment");
         // Begin the transaction
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         // Replace the contents of the container with the new fragment
-        ft.replace(R.id.fragment_placeholder, new FirstFragment(), FRAGMENT_TAG);
+        ft.replace(R.id.fragment_placeholder, fragment, FRAGMENT_TAG);
         // or ft.add(R.id.your_placeholder, new FooFragment());
         // Complete the changes added above
         ft.commit();
-        // TODO 05. Look up the fragment by tag
-        getSupportFragmentManager().executePendingTransactions();
-        Fragment firstFragment = getSupportFragmentManager().findFragmentByTag(FRAGMENT_TAG);
-        if (firstFragment != null) {
-            Log.d(TAG, "Correct reference to the fragment");
-        }
     }
 }

@@ -1,6 +1,7 @@
 package edu.ualr.fragments.fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,8 +19,34 @@ import edu.ualr.fragments.R;
  */
 public class FirstFragment extends Fragment {
 
+    private static final String INT_VALUE_KEY = "IntValue";
+    private static final String TITLE_VALUE_KEY = "TitleValue";
+    private static final String TAG = FirstFragment.class.getSimpleName();
+
     private Button button;
     private TextView label;
+
+    // TODO 04. We define a static method to create a new instance of the fragment
+    //  and use the setArguments method to set certain arguments into the fragment for later access
+
+    public static FirstFragment newIntance (int intValue, String title) {
+        FirstFragment fragment = new FirstFragment();
+        Bundle args = new Bundle();
+        args.putInt(INT_VALUE_KEY, intValue);
+        args.putString(TITLE_VALUE_KEY, title);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    // TODO 05. Access the arguments of the fragment within onCreate
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        int intValue = getArguments().getInt(INT_VALUE_KEY);
+        String title = getArguments().getString(TITLE_VALUE_KEY);
+        Log.d(TAG, String.format("The arguments of the fragment are '%d' and '%s'", intValue, title));
+    }
 
     @Nullable
     @Override
