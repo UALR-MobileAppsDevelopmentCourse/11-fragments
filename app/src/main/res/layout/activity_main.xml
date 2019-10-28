@@ -5,6 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- TODO 03. Add the fragment statically to the activity -->
+    <!-- TODO 03. Add the fragment statically to the activity. Use the fragment class defined to set the name property-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
