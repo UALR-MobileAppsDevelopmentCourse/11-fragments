@@ -44,8 +44,8 @@ public class FirstFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         int intValue = getArguments().getInt(INT_VALUE_KEY);
-        String title = getArguments().getString(TITLE_VALUE_KEY);
-        Log.d(TAG, String.format("The arguments of the fragment are '%d' and '%s'", intValue, title));
+        String msg = getArguments().getString(TITLE_VALUE_KEY);
+        Log.d(TAG, String.format(msg, intValue));
     }
 
     @Nullable
@@ -60,8 +60,9 @@ public class FirstFragment extends Fragment {
         label = view.findViewById(R.id.textLabel);
         // TODO 06. Access the arguments of the fragment within onViewCreated to populate widgets with the data in
         // the arguments
-        String title = getArguments().getString(TITLE_VALUE_KEY);
-        label.setText(title);
+        String msg = getArguments().getString(TITLE_VALUE_KEY);
+        int intValue = getArguments().getInt(INT_VALUE_KEY);
+        label.setText(String.format(msg, intValue));
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {}

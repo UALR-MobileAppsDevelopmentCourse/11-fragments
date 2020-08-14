@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // TODO 06. Load the fragment dynamically
-        FirstFragment fragment = FirstFragment.newIntance(23, "My new fragment");
+        FirstFragment fragment = FirstFragment.newIntance(23, "Who is that player with the number %d in the shirt?");
         // Begin the transaction
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         // Replace the contents of the container with the new fragment
