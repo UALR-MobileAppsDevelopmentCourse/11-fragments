@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
+    namespace 'edu.ualr.fragments'
     compileSdkVersion 29
     defaultConfig {
         applicationId "edu.ualr.fragments"
